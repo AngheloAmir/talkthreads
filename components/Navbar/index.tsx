@@ -30,7 +30,7 @@ const NavigationBar = () => {
                 </div>
             </div>
             <div id={style.navigationItemsDesktop}>
-            <ul>
+                <ul>
                     <li>
                         <Link href=''>
                             <a href="${li.link}">one</a>
