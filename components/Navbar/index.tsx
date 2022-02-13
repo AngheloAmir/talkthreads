@@ -1,11 +1,12 @@
 import React from 'react';
-import Link from 'next/link';
-import style from './nav.module.scss';
+import style from './Nav.module.scss';
+import { NavbarSpace } from './Interface';
+import NavItems from './NavItems';
 
 /**
- * A Resuable and Independent Navbar
+ * A Resuable and Independent Navbar. See the NavbarSpace for props
  */
-const NavigationBar = () => {
+export default function Navbar(props :NavbarSpace.NavbarProps) {
     const [isChange, setChange] = React.useState(false);
 
     function isCross() :string{
@@ -26,53 +27,13 @@ const NavigationBar = () => {
                     <div className={style.bar3}></div>
                 </div>
                 <div className={style.brand}>
-                    <img src="brandtitle.png" alt="brandicon"/>
+                    <img src={props.brandpath} alt={`missing ${props.brandpath}`}/>
                 </div>
             </div>
-            <div id={style.navigationItemsDesktop}>
-                <ul>
-                    <li>
-                        <Link href=''>
-                            <a href="${li.link}">one</a>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href=''>
-                            <a href="${li.link}">one</a>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href=''>
-                            <a href="${li.link}">one</a>
-                        </Link>
-                    </li>
-                </ul>
-            </div>
-            
-            <div id={style.navigationItems}
-                className={!isChange ? style.hiddenNav : ''}
-                onClick={() => alert('clicked')}>
-                <ul>
-                    <li>
-                        <Link href=''>
-                            <a href="${li.link}">one</a>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href=''>
-                            <a href="${li.link}">one</a>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href=''>
-                            <a href="${li.link}">one</a>
-                        </Link>
-                    </li>
-                </ul>
-            </div>
-    
+            <NavItems
+                items={props.items}
+                isChange={isChange}
+            />
         </div>
-  
-      );
-    }
-export default NavigationBar;
+    );
+}

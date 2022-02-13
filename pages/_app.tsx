@@ -6,7 +6,19 @@ import NavigationBar from '../components/Navbar';
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <NavigationBar />
+      <NavigationBar
+        brandpath='brandtitle.png'
+        items={[
+          {
+            name: 'one',
+            path: '/'
+          },
+          {
+            name: 'two',
+            path: '/'
+          },
+        ]}
+      />
       <Component {...pageProps} />
     </>
   );

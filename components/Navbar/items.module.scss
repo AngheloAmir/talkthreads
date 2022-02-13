@@ -1,0 +1,92 @@
+
+ #navigationItems {
+    overflow: hidden;
+
+    @media (max-width: 580px) {
+        ul {
+            padding: 1rem;
+            padding-top: 0;
+            text-decoration: none;
+            list-style: none;
+            li {
+                border-bottom: 1px solid rgba($color: gray, $alpha: .5);
+                padding: 1rem;
+                padding-left: 1.5rem;
+                font-size: 1.1rem;
+                a {
+                    text-decoration: none;
+                    list-style: none;
+                    color: black;
+                    padding-right: 5rem;
+                    :active {
+                        color: blue;
+                    }
+                }
+                :hover {
+                    color: blue;
+                    font-weight: bold;
+                }
+            }
+            li:last-child {
+                border: 0;
+            }
+        }
+    }
+    @media (min-width: 580px) {
+        display: none;
+    }
+    .nav-active {
+        color: darkblue;
+        text-decoration: underline;
+    }
+}
+
+#navigationItemsDesktop {
+    display: none;
+    width: 100%;
+
+    @media (min-width: 580px) {
+        display: inline;
+        padding-right: 1rem;
+    }
+    @media (min-width: 768px) {
+        padding-right: 3rem;
+    }
+    ul {
+        display: inline;
+        margin-right: 1rem;
+        padding-top: 0.2rem;
+        li {
+            border: 3px solid transparent;
+            display: inline;
+            font-size: 1.1rem;
+            margin-right: 1rem;
+            float:  right;
+            @media (min-width: 767px) {
+                margin-right: 2rem;
+                padding-top: 0.4rem;
+                }
+            a {
+                text-decoration: none;
+                list-style: none;
+                color: black;
+                :active {
+                    color: blue;
+                }
+            }
+            :hover {
+                color: blue;
+                background-color: lightblue;
+            }
+        }
+    }
+    .nav-active {
+        color: darkblue;
+        text-decoration: underline;
+    }
+}
+
+
+.hiddenNav {
+    height: 0 !important;
+}
