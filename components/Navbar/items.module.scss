@@ -1,6 +1,6 @@
-
  #navigationItems {
     overflow: hidden;
+    transition: height 0.3s ease-out;
 
     @media (max-width: 580px) {
         ul {
@@ -11,8 +11,15 @@
             li {
                 border-bottom: 1px solid rgba($color: gray, $alpha: .5);
                 padding: 1rem;
-                padding-left: 1.5rem;
+                padding-left: 0.5rem;
                 font-size: 1.1rem;
+
+                img {
+                    height:     32px;
+                    width:      32px;
+                    margin-right: 1.5rem;
+                } 
+
                 a {
                     text-decoration: none;
                     list-style: none;
@@ -22,11 +29,13 @@
                         color: blue;
                     }
                 }
+
                 :hover {
                     color: blue;
                     font-weight: bold;
                 }
             }
+
             li:last-child {
                 border: 0;
             }
@@ -46,47 +55,41 @@
     width: 100%;
 
     @media (min-width: 580px) {
-        display: inline;
-        padding-right: 1rem;
+        display: flex;
     }
-    @media (min-width: 768px) {
-        padding-right: 3rem;
+    @media (min-width: 980px) {
+        justify-content: center;
     }
+    
     ul {
-        display: inline;
-        margin-right: 1rem;
+        margin: 0;
         padding-top: 0.2rem;
+
         li {
-            border: 3px solid transparent;
             display: inline;
             font-size: 1.1rem;
-            margin-right: 1rem;
-            float:  right;
-            @media (min-width: 767px) {
-                margin-right: 2rem;
-                padding-top: 0.4rem;
-                }
+            list-style-type: none;
+            margin-right: 1.5rem;
+
             a {
-                text-decoration: none;
-                list-style: none;
-                color: black;
-                :active {
-                    color: blue;
+                display: none;
+                @media (min-width: 980px) {
+                    display: inline;
                 }
             }
-            :hover {
-                color: blue;
-                background-color: lightblue;
-            }
+            img {
+                height:     32px;
+                width:      32px;
+            } 
+        }
+
+        li:hover {
+            color: blue;
         }
     }
+
     .nav-active {
         color: darkblue;
         text-decoration: underline;
     }
-}
-
-
-.hiddenNav {
-    height: 0 !important;
 }

@@ -1,10 +1,39 @@
 import React from 'react';
-import style from './Nav.module.scss';
+import style from './nav.module.scss';
 import { NavbarSpace } from './Interface';
-import NavItems from './NavItems';
+import NavItems from './Items';
 
 /**
- * A Resuable and Independent Navbar. See the NavbarSpace for props
+ * A Resuable and Independent Navbar created for Next.js
+    @Props needed to the navbar
+    @param brandpath (string)
+    An optional path of the image (string). Recomemded size is 170x36
+    @param items (item[])
+    An array of nav items. Content is defined below
+    
+    @interface item
+    Define the content of each individual nav item
+    @param name (string)
+    string containing the nav item that will appear
+    @param path (string)
+    the url string when clicked
+    @param icon (string | undefined)
+    the url path of the image icon. Recomemded size is 64x64px
+ * @example
+ * <NavigationBar
+        brandpath='brandtitle.png'
+        items={[
+          {
+            name: 'Home',
+            path: '/',
+            icon: 'homeicon.png'
+          },
+          {
+            name: 'About',
+            path: '/'
+          },
+        ]}
+    />
  */
 export default function Navbar(props :NavbarSpace.NavbarProps) {
     const [isChange, setChange] = React.useState(false);
