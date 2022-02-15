@@ -18,8 +18,7 @@
                     height:     32px;
                     width:      32px;
                     margin-right: 1.5rem;
-                } 
-
+                }
                 a {
                     text-decoration: none;
                     list-style: none;
@@ -55,15 +54,21 @@
     width: 100%;
 
     @media (min-width: 580px) {
-        display: flex;
+        display: block;
     }
     @media (min-width: 980px) {
+        display: flex;
         justify-content: center;
     }
-    
+
     ul {
         margin: 0;
         padding-top: 0.2rem;
+        
+        @media (max-width: 979px) {
+            display: flex;
+            justify-content: space-evenly;
+        }
 
         li {
             display: inline;
@@ -78,13 +83,25 @@
                 }
             }
             img {
-                height:     32px;
-                width:      32px;
-            } 
+                height:     36px;
+                width:      36px;
+                @media (min-width: 980px) {
+                    height:     30px;
+                    width:      30px;
+                    margin-left: 0;
+                }
+            }
+            :hover {
+                @media (max-width: 980px) {
+                    background-color: lightblue;
+                    border-radius: 0.5rem;
+                }
+            }
         }
 
         li:hover {
             color: blue;
+            text-decoration: underline;
         }
     }
 
