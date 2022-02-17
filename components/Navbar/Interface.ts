@@ -1,7 +1,7 @@
 /**
  * The NavbarSpace contains a list of interface the will be used only by the Navbar component
 */
-export namespace NavbarSpace {
+export namespace Navbar {
     /**
      * Props needed to the navbar
      * @param brandpath
@@ -9,18 +9,20 @@ export namespace NavbarSpace {
      * @param items
      * An array of nav items. See NavbarItem
      */
-    export interface NavbarProps {
+    export interface Props {
         brandpath?      :string;
         items?          :NavbarItem[];
     }
+
     /**
      * Used internally, no need to use outside the navbar component
      */
-    export interface NavbarListItem {
-        items?      :NavbarSpace.NavbarItem[];
+    export interface ListItem {
+        items?      :NavbarItem[];
         callback?   :() => void;
         isChange    :boolean;
     }
+
     /**
      * Define the content of each individual nav item
      * @param name :string
@@ -34,8 +36,10 @@ export namespace NavbarSpace {
         name            :string;
         path            :string;
         icon?           :string;
+        notif?          :boolean;
     }
+
     export interface NavItemPropsReceive {
-        items?      :NavbarSpace.NavbarItem[];
+        items?      :Navbar.NavbarItem[];
     }
 }

@@ -1,12 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
-import { NavbarSpace } from './Interface';
+import { Navbar } from './Interface';
 import style from './items.module.scss';
 
 /**
  * The list of items that will appear in the navigation bar
  */
-export default function Items(props :NavbarSpace.NavbarListItem) {
+export default function Items(props :Navbar.ListItem) {
     const itemref = React.useRef<HTMLDivElement>(null)
     const [navheight, setHeight] = React.useState(0);
     
@@ -19,9 +19,13 @@ export default function Items(props :NavbarSpace.NavbarListItem) {
 
     return ( 
         <>
+           {/* This div is for desktop size navbar */}
             <div id={style.navigationItemsDesktop}>
                 <NavItems items={props.items} />
             </div>
+
+            {/* This div is for mobile size navbar. If the screen is bigger, this
+             div become invisible. */}
             <div id={style.navigationItems}
                 style={
                     !props.isChange ?
@@ -32,15 +36,15 @@ export default function Items(props :NavbarSpace.NavbarListItem) {
                 <NavItems items={props.items} />
             </div>
         </>
-    )
+    );
 }
 
-function NavItems(props :NavbarSpace.NavItemPropsReceive) {
+function NavItems(props :Navbar.NavItemPropsReceive) {
     if(!props.items) return <div></div>;
 
     return (
         <ul>
-            { props.items.map((item :NavbarSpace.NavbarItem, index :number) => {
+            { props.items.map((item :Navbar.NavbarItem, index :number) => {
                 return (
                     <li key={index}>
                         { item.icon &&

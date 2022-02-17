@@ -4,27 +4,28 @@
         {
             "name": "Home",
             "icon": "app/navbar/home.png",
+            "path": "/",
+            "notif": true
+        },
+        {
+            "name": "Messages",
+            "icon": "app/navbar/message.png",
             "path": "/"
         },
         {
-        "name": "Messages",
-        "icon": "app/navbar/message.png",
-        "path": "/"
+            "name": "Notification",
+            "icon": "app/navbar/notification.png",
+            "path": "/"
         },
         {
-        "name": "Notification",
-        "icon": "app/navbar/notification.png",
-        "path": "/"
+            "name": "Freinds",
+            "icon": "app/navbar/freinds.png",
+            "path": "/"
         },
         {
-        "name": "Freinds",
-        "icon": "app/navbar/freinds.png",
-        "path": "/"
-        },
-        {
-        "name": "Setting",
-        "icon": "app/navbar/setting.png",
-        "path": "/"
+            "name": "Setting",
+            "icon": "app/navbar/setting.png",
+            "path": "/"
         }
     ]
 }

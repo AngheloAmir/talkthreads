@@ -1,6 +1,6 @@
 import React from 'react';
 import style from './nav.module.scss';
-import { NavbarSpace } from './Interface';
+import { Navbar } from './Interface';
 import NavItems from './Items';
 
 /**
@@ -19,6 +19,7 @@ import NavItems from './Items';
     the url string when clicked
     @param icon (string | undefined)
     the url path of the image icon. Recomemded size is 64x64px
+
  * @example
  * <NavigationBar
         brandpath='brandtitle.png'
@@ -34,8 +35,8 @@ import NavItems from './Items';
           },
         ]}
     />
- */
-export default function Navbar(props :NavbarSpace.NavbarProps) {
+*/
+export default function NavbarMainComponent(props :Navbar.Props) {
     const [isChange, setChange] = React.useState(false);
 
     function isCross() :string{
