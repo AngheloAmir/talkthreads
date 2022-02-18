@@ -1,0 +1,41 @@
+/*
+common things to copy:
+
+    @include tabletscreen {
+        background-color: green; 
+    }
+    @include desktopscreen {
+        background-color: blue;
+    }
+
+*/
+
+@mixin mobilescreen {
+    @media (max-width: 578px) {
+        @content;
+    }
+}
+
+@mixin mediumscreen {
+    @media (min-width: 576px) {
+        @content;
+    }
+}
+
+@mixin tabletscreen {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin desktopscreen {
+    @media (min-width: 981px) {
+        @content;
+    }
+}
+
+@mixin bigscreen {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}

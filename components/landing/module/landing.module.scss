@@ -1,0 +1,60 @@
+@import "_screen.scss";
+
+#landingContainer {
+    background-image: -webkit-linear-gradient(rgb(185, 246, 248), rgb(129, 158, 168));
+    border-bottom-right-radius: 20%;
+    height: 100vh;
+    padding: 4.5rem 5%;
+}
+
+.content {
+    border: 2px solid red;
+    display: block;
+    @include tabletscreen {
+        display: flex;
+    }
+
+    .imagecontent {
+        border: 2px solid orange;
+        .image {    
+            display: block;
+            height: 200px;
+            width: 200px;
+            margin: auto;
+    
+            @include desktopscreen {
+                height: 300px;
+                width: 300px;
+            }
+        }
+    }
+
+    .textcontent {
+        border: 2px solid green;
+        h3 {
+            font-size: 1.5rem;
+            text-align: center;
+            @include tabletscreen {
+                font-size: 2.5rem;
+            }
+        }
+        p {
+            font-size: 1.5rem;
+            font-weight: 300;
+            text-align: center;
+            @include tabletscreen {
+                font-size: 2rem;
+                margin-top: 2rem;
+            }
+        }
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 2rem;
+        button {
+            width: 40%;
+        }
+    }
+}
