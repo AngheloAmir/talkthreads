@@ -40,7 +40,7 @@ export default function Items(props :Navbar.ListItem) {
 }
 
 function NavItems(props :Navbar.NavItemPropsReceive) {
-    if(!props.items) return <div></div>;
+    if(!props.items || props.items.length < 1) return <div></div>;
 
     return (
         <ul>

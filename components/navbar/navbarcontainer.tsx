@@ -1,5 +1,6 @@
 import NavigationBar from './module';
 import navbar from '../../app/data/navbar.json';
+import landingpage from '../../app/data/landingpage.json';
 import { useRouter } from 'next/router';
 
 /**
@@ -11,11 +12,11 @@ export default function NavbarContainer() {
     const router = useRouter();
 
     return (
-        <>
-        { router.pathname == '/' ?
+      <>
+      { router.pathname == '/' ?
         <NavigationBar
           brandpath={navbar.brandpath}
-          items={navbar.items}
+          items={landingpage.items}
         />
         :
         <NavigationBar
@@ -23,6 +24,6 @@ export default function NavbarContainer() {
           items={navbar.items}
         />
       }
-        </>
+      </>
     )
 }

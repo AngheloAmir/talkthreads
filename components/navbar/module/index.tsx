@@ -51,11 +51,15 @@ export default function NavbarMainComponent(props :Navbar.Props) {
     return (
         <div id={style.navigation}>
             <div className={style.navcontainer}>
-                <div id={style.menuicon} className={isCross()} onClick={handleMenuClick}>
-                    <div className={style.bar1}></div>
-                    <div className={style.bar2}></div>
-                    <div className={style.bar3}></div>
-                </div>
+
+                { props.items && props.items.length >= 1 &&
+                    <div id={style.menuicon} className={isCross()} onClick={handleMenuClick}>
+                        <div className={style.bar1}></div>
+                        <div className={style.bar2}></div>
+                        <div className={style.bar3}></div>
+                    </div>
+                }
+                
                 <div className={style.brand}>
                     <img src={props.brandpath} alt={`missing ${props.brandpath}`}/>
                 </div>

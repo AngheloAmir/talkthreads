@@ -8,14 +8,16 @@
 }
 
 .content {
-    border: 2px solid red;
     display: block;
+    margin: 5vh auto;
+    max-width: 1200px;
+
     @include tabletscreen {
         display: flex;
+        margin: 10vh auto;
     }
 
     .imagecontent {
-        border: 2px solid orange;
         .image {    
             display: block;
             height: 200px;
@@ -30,7 +32,10 @@
     }
 
     .textcontent {
-        border: 2px solid green;
+        @include tabletscreen {
+            padding: 0 2rem;
+        }
+
         h3 {
             font-size: 1.5rem;
             text-align: center;
@@ -49,11 +54,12 @@
         }
     }
 
-    .buttons {
+    .buttonContainer {
         display: flex;
         justify-content: space-evenly;
         margin-top: 2rem;
         button {
+            height: 2rem;
             width: 40%;
         }
     }
