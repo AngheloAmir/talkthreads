@@ -17,6 +17,8 @@ export default function LandingPageContainer() {
             text={landingpagejson.welcome.text}
             btnaction1={landingpagejson.welcome.btn}
             btnaction1cb={() => alert('pressed')}
+            btnaction2={landingpagejson.welcome.btnlogin}
+            btnaction2cb={() => alert('login in')}
         />
     )
 }

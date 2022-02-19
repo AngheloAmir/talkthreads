@@ -3,11 +3,17 @@
         "heading": "Talk Threads",
         "text": "Discuss with others around the world for FREE! Join others arround the world and befreinds with them! Sign up now!",
         "image": "brandicon.png",
-        "btn": "Sign-up NOW!"
+        "btn": "Sign-up NOW!",
+        "btnlogin": "Log-in"
     },
     
     "brandpath": "brandtitle.png",
     "items": [
+        {
+            "name": "Log-in",
+            "icon": "app/navbar/login.png",
+            "path": "/"
+        }
     ]
 }
  

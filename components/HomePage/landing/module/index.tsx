@@ -33,7 +33,7 @@ export default function LandingPageMain(props :LandingPageProps) {
 
                     <div className={styles.buttonContainer}>
                         {  props.btnaction1 &&
-                            <button id={btnstyle.Designbutton}
+                            <button id={btnstyle.DesignbuttonHightlight}
                                 onClick={props.btnaction1cb}>
                                 {props.btnaction1}
                             </button>
