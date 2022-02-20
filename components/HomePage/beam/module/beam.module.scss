@@ -1,0 +1,82 @@
+@import '_screen.scss';
+
+$imagewidthMobile:      300px;
+$imageheightMobile:     250px;
+
+$imagewidthTablet:      380px;
+$imageheightTablet:     300px;
+
+$imagewidthDesktop:     560px;
+$imageheightDesktop:    480px;
+
+#Beam {
+    display: block;
+    max-width: 1300px;
+    margin: auto;
+    padding-bottom: 0.5rem;
+    width: 90%;
+
+    @include tabletscreen {
+        height: 90vh;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .imageContainer {
+        width: $imagewidthMobile;
+        height: $imageheightMobile;
+        margin: auto;
+
+        @include tabletscreen {
+            width: $imagewidthTablet;
+            height: $imageheightTablet;
+        }
+        
+        @include desktopscreen {
+            width: $imagewidthDesktop;
+            height: $imageheightDesktop;
+        }
+
+        img {
+            width: $imagewidthMobile;
+            height: $imageheightMobile;
+
+            @include tabletscreen {
+                width: $imagewidthTablet;
+                height: $imageheightTablet;
+            }
+
+            @include desktopscreen {
+                width: $imagewidthDesktop;
+                height: $imageheightDesktop;
+            }
+        }
+    }
+
+    .textContainer {
+        margin: auto;
+        max-width: 600px;
+        padding: 1rem;
+        text-align: center;
+        
+
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0;
+
+            @include tabletscreen {
+                font-size: 2rem;
+            }
+        }
+        p {
+            font-size:      1.2rem;
+            line-height:    1.8rem;
+            margin-top:     0.8rem;
+
+            @include tabletscreen {
+                font-size:  1.6rem;
+                line-height: 2.8rem;
+            }
+        }
+    }
+}

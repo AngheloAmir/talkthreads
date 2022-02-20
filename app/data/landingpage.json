@@ -14,6 +14,21 @@
             "icon": "app/navbar/login.png",
             "path": "/"
         }
+    ],
+
+    "beams": [
+        {
+            "imagepath": "home/talk.png",
+            "title": "Talk with Everyone",
+            "text": "Discuss with others about any topic that may interest you. Exchange thoughs and idea. Learn more from others around the world.s",
+            "reverse": false
+        },
+        {
+            "imagepath": "home/lock.png",
+            "title": "You own your privacy",
+            "text": "We do NOT use your privacy for advertisment! But we rely on donation. Please support to continue a free service for everyone in the world!",
+            "reverse":  true
+        }
     ]
 }
  
