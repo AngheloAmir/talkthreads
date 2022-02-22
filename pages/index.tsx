@@ -14,9 +14,14 @@ const Home: NextPage = () => {
         <button>Register!</button>
       </div>
 
-      <div style={{backgroundColor: 'orange'}}>
-        <h3>Footer are here!</h3>
-        <h3>Created by Anghelo Amir using Next.js!</h3>
+      <div style={{
+        width: '100%',
+        height: '3rem',
+        textAlign: 'center',
+        backgroundColor: 'lightblue',
+        paddingTop: '1rem'
+      }}>
+          Created by: Amir. A Next.js Forum application
       </div>
     </div>
   );
