@@ -33,6 +33,7 @@ const Home: NextPage = () => {
         color: 'white',
         padding: '3rem',
         borderRadius: '1rem'
+        
       }}>
         <h1>JOIN NOW</h1>
       <h3>3000 miliosn of people are enjoying our service!</h3>
